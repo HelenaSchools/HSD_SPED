@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<!-- start right frame -->
+
+    <head>
+        <title>Social Service</title>
+        ~[wc:commonscripts]
+        <link href="/images/css/screen.css" rel="stylesheet" media="screen">
+        <link href="/images/css/print.css" rel="stylesheet" media="print">
+        
+    </head>
+    <body>
+        <form action="socialservice2.html?ac=jumpstudent1&amp;rn=~(rn)" method="POST">
+            ~[wc:admin_header_frame_css]
+            <!-- breadcrumb start -->
+            <a href="/admin/home.html" target="_top">~[text:psx.html.admin_students.misc.start_page]</a> &gt;
+            <a href="home.html?selectstudent=nosearch" target="_top">~[text:psx.html.admin_students.misc.student_selection]</a> &gt;Social Service
+            <!-- breadcrumb end -->~[wc:admin_navigation_frame_css] ~[wc:title_student_begin_css]Social Service~[wc:title_student_end_css]
+            <!-- start of content and bounding box -->
+            <div class="box-round">
+
+                <table border="0" cellspacing="0" cellpadding="4" align="center" class="linkDescList">
+                    <tr>
+                        <td class="bold">504 Status</td>
+                        <td>
+                            <input type="checkbox" name="[Students]MT_504" value="1" id="MT_504" > May not be checked if "SPED Status" is checked.</td>
+                        <td class="bold">
+                            <!-- Counselor -->
+                        </td>
+                        <td>
+                            <!-- <select name="[01]counselor">
+                                <option value=""></option>
+                                <option value="Anderson">Anderson</option>
+                                <option value="Bawden">Bawden</option>
+                                <option value="Berg">Berg</option>
+                                <option value="Broadhead">Broadhead</option>
+                                <option value="Campbell">Campbell</option>
+                                <option value="Chapman">Chapman</option>
+                                <option value="Dempsey">Dempsey</option>
+                                <option value="Fee">Fee</option>
+                                <option value="Ferlicka">Ferlicka</option>
+                                <option value="Flatow">Flatow</option>
+                                <option value="Hart">Hart</option>
+                                <option value="MurgelC">Murgel, C</option>
+                                <option value="MurgelJ">Murgel, J</option>
+                                <option value="Kemper">Kemper</option>
+                                <option value="Marshall">Marshall</option>
+                                <option value="McCauley">McCauley</option>
+                                <option value="Meldrum">Meldrum</option>
+                                <option value="Michaud">Michaud</option>
+                                <option value="Miller">Miller</option>
+                                <option value="Opitz">Opitz</option>
+                                <option value="Ozburn">Ozburn</option>
+                                <option value="Pandis">Pandis</option>
+                                <option value="Robinson">Robinson</option>
+                                <option value="Silvers">Silvers</option>
+                                <option value="Simonson">Simonson</option>
+                                <option value="Staldine">Standine</option>
+                                <option value="Unsworth">Unsworth</option>
+                                <option value="Zentz">Zentz</option>
+                            </select> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bold">SPED/IEP Active</td>
+                        <td>
+                            <select name="[01]spediep_active">
+                                <option></option>
+                                <option value="Y">Y</option>
+                                <option value="N">N</option>
+                            </select>
+                        </td>
+                        <td class="bold">
+                            <!-- SPED/IEP Pending -->
+                        </td>
+                        <td>
+                            <!-- <input type="checkbox" name="[students.U_SPED]spediep_pending" value="" /> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bold">SLP Informal</td>
+                        <td>
+                            <input type="checkbox" name="[01]slp_informal" value="1">
+                        </td>
+                        <td class="bold">Private School Plan</td>
+                        <td>
+                            <input type="checkbox" name="[01]sped_private" value="1">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Primary Handicap</td>
+                        <td>
+                            <select name="[01]handicap1">
+                                <option value=""></option>
+                                <option value="AU">Autistic(AU)
+                                <option value="CD">Cognitively Delayed(CD)</option>
+                                <option value="CW">Child w/Disability(CW)</option>
+                                <option value="DB">Deaf and Blind(DB)</option>
+                                <option value="DD">Developmental Delay(DD)</option>
+                                <option value="DE">Deaf(DE)</option>
+                                <option value="ED">Emotionally Disturbed(ED)</option>
+                                <option value="HI">Hearing Impaired(HI)</option>
+                                <option value="LD">Learning Disabled(LD)</option>
+                                <option value="OH">Other Health Impaired(OH)</option>
+                                <option value="OI">Orthopedically Impaired(OI)</option>
+                                <option value="SL">Speech and Language(SL)</option>
+                                <option value="TB">Tramatic Brain Injury(TB)</option>
+                                <option value="VI">Vision Impaired(VI)</option>
+                            </select>
+                        </td>
+                        <td class="bold">Secondary Handicap</td>
+                        <td>
+                            <select name="[01]handicap2">
+                                <option value=""></option>
+                                <option value="AU">Autistic(AU)</option>
+                                <option value="CD">Cognitively Delayed(CD)</option>
+                                <option value="CW">Child w/Disability(CW)</option>
+                                <option value="DB">Deaf and Blind(DB)</option>
+                                <option value="DD">Developmental Delay(DD)</option>
+                                <option value="DE">Deaf(DE)</option>
+                                <option value="ED">Emotionally Disturbed(ED)</option>
+                                <option value="HI">Hearing Impaired(HI)</option>
+                                <option value="LD">Learning Disabled(LD)</option>
+                                <option value="OH">Other Health Impaired(OH)</option>
+                                <option value="OI">Orthopedically Impaired(OI)</option>
+                                <option value="SL">Speech and Language(SL)</option>
+                                <option value="TB">Tramatic Brain Injury(TB)</option>
+                                <option value="VI">Vision Impaired(VI)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Case Manager</td>
+                        <td>
+                            <select name="[STUDENTS.U_SPED]students_case_manager">
+                                <option value=""></option>   
+                                ~[tlist_sql;
+                                    select
+                                        to_char(u.dcid) dcid,
+                                        case when u.dcid=~([students.U_sped]students_case_manager) then 'selected' else '' end,
+                                        u.lastfirst
+                                        
+                                    from users u
+                                        join u_sped_users usped on usped.usersdcid=u.dcid
+                                    where usped.case_manager=1
+                                    order by u.lastfirst]
+                                    <option value="~(dcid)" ~(selected)>~(lastfirst)</option>
+                                [/tlist_sql]
+                                
+                                
+                            </select>
+                        </td>
+                        <td class="bold">Related Service Case Manager</td>
+                        <td>
+                            <select name="[Students.U_SPED]students_related_service_case">
+                                <option value=""></option>
+                                ~[tlist_sql;
+                                    select
+                                        to_char(u.dcid) dcid,
+                                        case when u.dcid=~([students.U_sped]students_case_manager) then 'selected' else '' end,
+                                        u.lastfirst
+                                        
+                                    from users u
+                                        join u_sped_users usped on usped.usersdcid=u.dcid
+                                    where usped.related_service_case_manager=1
+                                    order by u.lastfirst]
+                                    <option value="~(dcid)" ~(selected)>~(lastfirst)</option>
+                                [/tlist_sql]
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Current IEP Date</td>
+                        <td>
+                            <input type="text" name="[01]iep_currentdate" value="" size="10" >
+                        </td>
+                        <td class="bold">Current ERM Date</td>
+                        <td>
+                            <input type="text" name="[01]erm_currentdate" value="" size="10" >  
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Pre-K Category</td>
+                        <td>
+                            <select name="[01]prek_category">
+                                <option value=""></option>
+                                <option value="SPK">Special Ed Pre-K Only (SPK)</option>
+                                <option value="SPKHS">SPED PreK w/Head Start (SPKHS)</option>
+                                <option value="SPCH">Speech Only (SPCH)</option>
+                                <option value="HSSPCH">Head Start w/Speech (HSSPCH)</option>
+                            </select>
+                        </td>
+                        <td class="bold">Student Initials</td>
+                        <td>
+                            <input type="text" name="[01]student_initials" value="" size="10" >
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="bold">IEP/504 Alert</td>
+                        <td>
+                            <textarea name="[01]Alert_IEP" value="" rows="8" cols="40"></textarea>
+                        </td>
+                        <td class="bold">
+                            <!-- Related Services -->
+                        </td>
+                        <td>
+                            <!-- Speech<input type="checkbox" name="[01]rs_speech" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Transportation<input type="checkbox" name="[01]rs_transportation" value="1"><br />
+                            OT<input type="checkbox" name="[01]rs_ot" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PT<input type="checkbox" name="[01]rs_pt" value="1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Counseling<input type="checkbox" name="[01]rs_counseling" value="1"> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        
+                    </tr>
+                </table>
+                <br>
+                <div class="button-row">
+                    <input type="hidden" name="ac" value="prim">~[submitbutton]
+                </div>
+            </div>
+            <br>
+            <!-- end of content of bounding box -->
+            ~[wc:admin_footer_frame_css]
+        </form>
+        <script>
+            $j(document).ready(function(){
+                setTimeout(function(){
+                    $j('#btnSubmit').trigger('click');
+                },10)
+            })
+        </script>
+    </body>
+
+</html>
+<!-- end right frame -->

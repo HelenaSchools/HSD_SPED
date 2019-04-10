@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<!-- non framed -->
+
+<head>
+    <title>~[text:psx.html.admin_years.home.years_amp_terms]</title>
+    ~[wc:commonscripts]
+    <link href="/images/css/screen.css" rel="stylesheet" media="screen">
+    <link href="/images/css/print.css" rel="stylesheet" media="print">
+</head>
+
+<body>
+    ~[wc:admin_header_css]
+    <!-- breadcrumb start -->
+    <a href="/admin/home.html" target="_top">~[text:psx.html.admin_years.home.start_page]</a> &gt;
+    ~[if.district.office]
+    <a href="/admin/district/home.html" target="_top">~[text:psx.html.admin_years.home.district_setup]</a> &gt;
+    [else]
+    <a href="/admin/schoolsetup/home.html" target="_top">~[text:psx.html.admin_years.home.school_setup]</a> &gt;
+    [/if.district.office]
+    ~[text:psx.html.admin_years.home.years_amp_terms1]
+    <!-- breadcrumb end -->
+    ~[wc:admin_navigation_css]
+    <h1>SPED Set Up</h1><!-- start of content and bounding box -->
+    <div class="box-round">
+
+        <table border="0" cellspacing="0" cellpadding="4" class="linkDescList">
+            <tr>
+                <td colspan="5"></td>
+                <td ><A HREF="edit.html?frn=013-99" id="btnNew" name="btnNew"
+                        class="button">~[text:psx.html.admin_years.home.new]</A></td>
+            </tr>
+            <tr >
+                
+                <td class="bold">Code</td>
+                <td class="bold">Code Type</td>
+            </tr>
+            <tr>~[tlist_sql;Select id, code_type,Code from u_sped_codesets]
+                
+                <td><A HREF="edit.html?frn=~(frn)">~(code)</A></td>
+                <td>~(code_type)</td>
+            </tr>
+            
+        </table>
+        <br>
+    </div>
+    <br>
+    <!-- end of content of bounding box -->
+
+    ~[wc:admin_footer_css]
+
+</body>
+
+</html><!-- non framed -->
