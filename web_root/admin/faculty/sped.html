@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<!-- start right frame -->
+<head>
+<title>~[text:psx.html.admin_faculty.editpw.security_settings___nbsp,param:~(lastfirst),param:~(teachernumber)]</title>
+~[wc:commonscripts]
+<link href="/images/css/screen.css" rel="stylesheet" media="screen">
+<link href="/images/css/print.css" rel="stylesheet" media="print">
+<script language="JavaScript" type="text/javascript" src="/scripts/jquery.jqGrid.min.js"></script>
+</head>
+
+<body ng-app>
+
+<form class="noSubmitLoading watchDirtyState" action="/admin/faculty/sped.html?saved=true" method="POST">
+~[SetPostValue:returnToSender="true"]
+~[wc:admin_header_frame_css]<!-- breadcrumb start --><a href="/admin/home.html" target="_top">~[text:psx.html.admin_faculty.editpw.start_page]</a> &gt; <a href="/admin/faculty/search.html" target="_top">~[text:psx.html.admin_faculty.editpw.staff]</a> &gt; <a href="/admin/faculty/home.html?selectteacher=nosearch" target="_top">~[text:psx.html.admin_faculty.editpw.select_a_staff_member]</a> &gt;~[text:psx.html.admin_faculty.editpw.security_settings___nbsp1,param:~(lastfirst),param:~(teachernumber)]<!-- breadcrumb end -->~[wc:admin_navigation_frame_css]
+
+<span class="account-photo">~[facultytitlephoto]</span>
+<h1>~[text:psx.html.admin_faculty.editpw.security_settings___nbsp2,param:~(lastfirst),param:~(teachernumber)]</h1>
+
+		<ul class="tabs">
+		    <li><a href="editpw.html?frn=~(teacherfrn)">~[text:psx.html.admin_faculty.editpw.security_settings]</a></li>
+		    <li><a href="/admin/faculty/viewAssociations.action?frn=~(teacherfrn)">~[text:psx.html.admin_faculty.editpw.admin_roles]</a></li> 
+            <li><a href="/admin/faculty/staffsecurityapplications.html?frn=~(teacherfrn)">~[text:psx.html.admin_faculty.editpw.applications]</a></li> 
+            <li class="selected"><a href="sped.html?frn=~(teacherfrn)">~[text:psx.htmlc.admin_faculty.sped.sped_information]</a></li>
+		</ul>
+
+	~[if.~[GPV:saved]=true]
+	<div class="feedback-confirm">
+		~[text:psx.common.changes_recorded]
+	</div>
+	[/if]
+
+<!-- start of content and bounding box -->
+
+
+<div class="box-round" ng-controller>
+	<table class="linkDescList">
+		<colgroup><col><col></colgroup>
+		<tbody>
+			<!-- locked account message for teacher portal - NOTE: For NCF-7, this will remain in the same relative position that it was in, which is right before the state reporting content -->
+			~[SetPostValue:ifDisplay_prefix=<tr><td colspan=2 class="feedback-alert">]
+			~[SetPostValue:ifDisplay_suffix=</td></tr>]
+			~[SetPostValue:serviceName=PS Teacher Portal]
+			<tr>
+				<td class="bold">Case Manger</td>
+				<td><input type="checkbox" id="ptaccess" name="[USERS.U_SPED]case_manager" value="" /></td>
+            </tr>
+            <!--<tr ng-if="case_manager">
+				<td class="bold">
+					
+					~[text:psx.htmlc.admin_faculty.editpw.case_manager_student_list]
+				// For returning jqGrid rows 
+                    <input type="hidden" id="caseManagerStudentListAsJSON" name="caseManagerStudentListAsJSON" value="" />
+				</td>
+				<td>
+					<div id="gridFeedback"></div>
+					<div class="coteachGridBorder" >
+						<div id="teacherAccessSchoolsGridContainer" style="display:none;" class="jqgridx" class="widegrid" >
+							<table id="teacherAccessSchoolsTable"></table>                
+						</div>
+					</div>
+				</td>
+			</tr>-->
+            <tr>
+				<td class="bold">~[text:psx.htmlc.admin_faculty.editpw.related_service_case_manager]</td>
+				<td><input type="checkbox" id="ptaccess" name="[USERS.U_SPED]related_service_case_manager" value=""/></td>
+			</tr>
+			
+			<!-- NCF-11 Begin -->
+			<!-- <tr>
+				<td class="bold">
+					
+					
+				// For returning jqGrid rows 
+                    <input type="hidden" id="relatedServicecaseManagerStudentListAsJSON" name="relatedServicecaseManagerStudentListAsJSON" value="" />
+				</td>
+				<td>
+					<div id="gridFeedback"></div>
+					<div class="coteachGridBorder" >
+						<div class="button-row">
+							<button id="addOwnerRowButton" type="button" onclick="teacherAccessGridController.openAddSchoolsDialog()">~[text:psx.html.admin_faculty.editpw.button_add]</button>
+						</div>
+						<div id="GridLoadingImageDiv" style="height:100%; padding:100px;">
+							<img src="/images/img/jquery/ui-anim_basic_16x16.gif" /> 
+							<strong> ~[text:psx.common.loading]</strong> 
+						</div>
+						<div id="teacherAccessSchoolsGridContainer" style="display:none;" class="jqgridx" class="widegrid" >
+							<table id="teacherAccessSchoolsTable"></table>                
+						</div>
+					</div>
+				</td>
+			</tr>-->
+			
+			
+		</tbody>
+	</table>
+
+<br>
+
+<div class="button-row">
+	<input type="hidden" name="ac" value="prim">
+	~[submitbutton]</div>
+</div>
+<br>
+
+
+
+<!-- end of content of bounding box -->
+
+~[wc:admin_footer_frame_css]
+</form>
+</body>
+</html><!-- end right frame -->

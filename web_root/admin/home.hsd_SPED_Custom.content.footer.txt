@@ -1,0 +1,51 @@
+<div style="display:none" id="spedSearchBoxesHidden">
+<div id="spedSearchBoxes">
+    Case Manager
+    <select name="[STUDENTS.U_SPED]students_case_manager" id="caseManagerSearch">
+        <option value=""></option>
+        <option value="U_SPED.students_case_manager#;">ALL</option>   
+            ~[tlist_sql;
+                select
+                    to_char(u.dcid),
+                    u.lastfirst
+                from users u
+                    join u_sped_users usped on usped.usersdcid=u.dcid
+                where usped.case_manager=1
+                order by u.lastfirst]
+                    <option value="U_SPED.students_case_manager=~(dcid);">~(lastfirst)</option>
+            [/tlist_sql]
+    </select>
+    Related Services Case Manager
+    <select name="[STUDENTS.U_SPED]students_related_service_case" id="caseManagerSearch">
+        <option value=""></option>
+        <option value="U_SPED.students_related_service_case#;">ALL</option>   
+            ~[tlist_sql;
+                select
+                    to_char(u.dcid),
+                    u.lastfirst
+                from users u
+                    join u_sped_users usped on usped.usersdcid=u.dcid
+                where usped.related_service_case_manager=1
+                order by u.lastfirst]
+                    <option value="U_SPED.students_related_service_case=~(dcid);">~(lastfirst)</option>
+            [/tlist_sql]
+    </select>
+</div>
+</div>
+<script>
+    $j(document).ready(function(){
+        $j('a#selectAllStudents').closest('div').after($j('div#spedSearchBoxesHidden').html());
+        $j('select#caseManagerSearch').change(function(){
+            $j('#studentSearchInput').val($j(this).val()).trigger('input');
+            $j('#caseManagerSearch option').each(function(){
+                if($j(this).val()==''){
+                    $j(this).prop('selected',true);
+                }else{
+                    $j(this).prop('selected',false);
+                }
+
+            })
+            $j('#searchButton').click();
+        })
+    })
+</script>

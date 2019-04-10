@@ -1,0 +1,31 @@
+<script>
+	$j(document).ready(function(){
+		var socialServiceUl=$j('#hsdSpedInsertedContent #socialService ul').html();
+		$j('#std_information').prepend(socialServiceUl);
+		$j('#hsdSpedInsertedContent').empty();
+
+		alphabatizeList('std_information');
+		alphabatizeList('std_academics');
+		alphabatizeList('std_administration');
+		function alphabatizeList(listId){
+			var list = $j('#'+listId);
+			var listitems = list.children('li').get();
+			listitems.sort(function(a,b){
+				var upA=$j(a).text().toUpperCase();
+				var upB=$j(b).text().toUpperCase();
+
+				return upA<upB?-1:upA>upB?1:0;
+			})
+			$j.each(listitems, function(idx, itm){list.append(itm);});
+		}
+	});
+</script>
+
+
+<div id="hsdSpedInsertedContent" style="display:none">
+	<div id="socialService">
+		<ul>
+			<li><a href="socialService.html?frn=~(studentfrn)">Social Service</a></li>
+		</ul>
+	</div>
+</div>

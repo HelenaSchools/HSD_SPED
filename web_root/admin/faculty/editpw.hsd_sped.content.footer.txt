@@ -1,0 +1,13 @@
+<div id="spedContent" style="display:none">
+    <ul>
+        <li><a href="sped.html?frn=~(teacherfrn)">~[text:psx.htmlc.admin_faculty.sped.sped_information]</a></li>
+    </ul>
+</div>
+
+<script>
+    $j(document).ready(function(){
+        var spedContent=$j('#spedContent ul').html();
+        $j('ul.tabs').append(spedContent);
+        $j('#spedContent').empty();
+    })
+</script>

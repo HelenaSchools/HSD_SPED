@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<psExtension xmlns="http://www.powerschool.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://powerschool.com psextension.xsd">
+    <extensionname>U_SPED</extensionname>
+    <extendedTable coreTable="STUDENTS" dbTableName="U_SPED_STUDENTS" comment="">
+        <field name="counselor" type="integer" />
+        <field name="spediep_active" type="boolean" />
+        <field name="spediep_pending" type="boolean"  />
+        <field name="slp_informal" type="boolean" />
+        <field name="spediep_private" type="boolean"  />
+        <field name="handicap1" type="integer" />
+        <field name="handicap2" type="integer" />
+        <field name="students_case_manager" type="string" length="50" />
+        <field name="students_related_service_case" type="string" length="50" />
+        <field name="spediep_current_date" type="date" />
+        <field name="erm_current_date" type="date" />
+        <field name="prek_category" type="integer" />
+        <field name="alert_iep" type="string" length="4000" populatesFrom="alert_iep"/>
+        <field name="OM" type="boolean" description="Field to mark Orientation and Mobility services for seeing impaired students." />
+    </extendedTable>
+    <extendedTable coreTable="USERS" dbTableName="U_SPED_USERS" comment="">
+        <field name="related_service_case_manager" type="boolean" />
+        <field name="case_manager" type="boolean" />
+    </extendedTable>
+    <extendedTable type="standalone" dbTableName="U_SPED_CodeSets" childName="U_SPED_PrekCategories" comment="">
+        <field name="Code_Type" type="string" length="50" />
+        <field name="Code" type="string" length="50" isUnique="true" />
+    </extendedTable>
+</psExtension>
